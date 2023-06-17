@@ -1,50 +1,40 @@
 const quotes = [
-    {
-    quote: 'I never dreamed about success, I worked for it',
-    author: 'Estee Lauder'
+    { main: "하지만 우리가 빛의 속도로 갈 수조차 없다면, 같은 우주라는 개념이 대체 무슨 의미가 있나?",
+        sub: "  - 우리가 빛의 속도로 갈 수 없다면",
     },
-    {
-    quote: 'Do not try to be original, just try to be good.',
-    author: 'Paul Rand'
+    { main: "I've had lots of troubles, so I write jolly tales.",
+    sub: "  - Louisa May Alcott",
     },
-    {
-    quote: 'Do not be afraid to give up the good to go for the great',
-    author: 'John D. Rockefeller'
+    { main: "Chess isn't always competitive. Chess can also be beautiful.",
+    sub: "  - Queen's Gambit, Halmon",
     },
-    {
-    quote: 'If you cannot fly then run. If you cannot run, then walk. And if you cannot walk, then crawl, but whatever you do, you have to keep moving forward.',
-    author: 'Martin Luther King Jr.'
+    { main: "My experience has taught me what you know isn't always what's important.",
+    sub: "  - Queen's Gambit, Alma",
     },
-    {
-    quote: 'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.',
-    author: 'Thomas Edison'
+    { main: "The strongest person is the person who isn't scared to be alone.",
+    sub: "  - Queen's Gambit, Alice",
     },
-    {
-    quote: 'The fastest way to change yourself is to hang out with people who are already the way you want to be',
-    author: 'REid Hoffman'
+    { main: "If you don't like it, You change it.",
+    sub: "  - Miss Sloane",
     },
-    {
-    quote: 'Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations',
-    author: 'Tim O Reilly'
+    { main: "Suddenly, time travel seems almost unnecessary, because every detail of life is so delightful.",
+    sub: "  - About time",
     },
-    {
-    quote: 'Some people dream of success, while other people get up every morning and make it happen',
-    author: 'Wayne Huizenga'
-    },
-    {
-    quote: 'The only thing worse than starting something and falling.. is not starting something',
-    author: 'SEth Godin'
-    },
-    {
-    quote: 'If you really want to do something, you will find a way. If you do not, you will find an excuse.',
-    author: 'Jim Rohn'
-    },
-    ];
-    
-    const quote = document.querySelector("#quote span:first-child");
-    const author = document.querySelector("#quote span:last-child");
-    const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    
-    quote.innerText = todaysQuote.quote;
-    author.innerText = todaysQuote.author;
+    { main: "We are all traveling through ime together, everyday of our lives. all we can do is do our best to relish this remarkable ride.",
+    sub: "  - About time",
+    }
+]
+
+const quote = document.querySelector("#quotes span:first-child");
+const author = document.querySelector("#quotes span:last-child");
+
+// Math object : 수학 계산과 관련된 계산 기능을 포함한 객체
+// Math.random() = 0~1사이의 숫자를 랜덤으로 송출함(0.4353423423)
+// Math.random() * 10 = 1~10사이의 숫자를 송출 
+// Matn.round(반올림), ceil(올림), floor(버림)
+
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = todaysQuote.main;
+author.innerText = todaysQuote.sub;
     
